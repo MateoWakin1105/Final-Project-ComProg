@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GreenScape landscape consultation and plant ordering system demo.">
+  <title>GreenScape | Landscape Consultation & Plant Ordering</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="GreenScape home"><span class="brand-mark">❧</span><span><strong>GreenScape</strong><small>Design · Plant · Thrive</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#catalog">Services & Catalog</a><a href="#booking">Book Consultation</a><a href="#records">Records</a><a href="#about">About / Help</a>
+    </nav>
+    <a class="header-cta" href="#booking">Get Started ↗</a>
+  </header>
+
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Thoughtful spaces. Natural living.</p>
+        <h1>Landscape Architecture<br>Consultation &amp; Plant<br>Ordering System</h1>
+        <p>Transform your outdoor space into a greener, healthier, and more beautiful environment.</p>
+        <a class="button button-light" href="#booking">▦ &nbsp;Book Consultation <span>→</span></a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Modern landscaped garden with plants and outdoor seating"></div>
+    </section>
+
+
+    <section class="catalog-section section" id="catalog">
+      <div class="section-heading"><span class="heading-leaf">❧</span><h2>Services &amp; Plant Catalog</h2><span class="heading-leaf">❧</span></div>
+      <p class="section-subtitle">Choose from our consultation packages and curated plant selections.</p>
+      <div class="catalog-columns">
+        <div class="catalog-group">
+          <h3>⌂ &nbsp;Consultation Packages</h3>
+          <div class="card-grid">
+            <article class="package-card">
+              <div class="package-image image-basic"></div><h4>Basic Consultation</h4><p>Site assessment &amp; design plan</p><strong class="price">₱2,500</strong><button class="select-package" data-package="Basic Consultation" data-price="2500">Select</button>
+            </article>
+            <article class="package-card">
+              <div class="package-image image-pro"></div><h4>Professional Design</h4><p>Full landscape design &amp; planting plan</p><strong class="price">₱5,000</strong><button class="select-package" data-package="Professional Design" data-price="5000">Select</button>
+            </article>
+            <article class="package-card">
+              <div class="package-image image-premium"></div><h4>Premium Design</h4><p>Complete design &amp; implementation plan</p><strong class="price">₱7,500</strong><button class="select-package" data-package="Premium Design" data-price="7500">Select</button>
+            </article>
+          </div>
+        </div>
+        <div class="catalog-group">
+          <h3>❧ &nbsp;Plant &amp; Material Packages</h3>
+          <div class="card-grid">
+            <article class="package-card">
+              <div class="package-image image-starter"></div><h4>Garden Starter Pack</h4><p>Trees, shrubs &amp; soil basics</p><strong class="price">₱3,000</strong><button class="select-package" data-package="Garden Starter Pack" data-price="3000">Select</button>
+            </article>
+            <article class="package-card">
+              <div class="package-image image-flower"></div><h4>Flower Paradise Pack</h4><p>Flowering plants &amp; mulch</p><strong class="price">₱4,000</strong><button class="select-package" data-package="Flower Paradise Pack" data-price="4000">Select</button>
+            </article>
+            <article class="package-card">
+              <div class="package-image image-oasis"></div><h4>Green Oasis Pack</h4><p>Tropical plants &amp; decor</p><strong class="price">₱5,500</strong><button class="select-package" data-package="Green Oasis Pack" data-price="5500">Select</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    <p class="demo-note">Demo package prices are illustrative and not a real quote.</p>
+    </section>
+
+
+    <section class="booking-section" id="booking">
+      <div class="booking-intro"><p class="eyebrow">Let's make your space bloom</p><h2>Book a Consultation</h2><p>Fill out the form to request a consultation or plant package.</p><ul><li>Tell us about your space</li><li>Choose a package</li><li>Send your request</li></ul></div>
+      <form class="transaction-form" id="transactionForm" novalidate>
+        <div class="form-grid">
+          <div class="form-field"><label for="clientName">Client Name <span>*</span></label><input id="clientName" name="clientName" type="text" autocomplete="name" placeholder="Enter your full name" required><small class="error" id="clientNameError"></small></div>
+          <div class="form-field"><label for="packageSelect">Service / Plant Package <span>*</span></label><select id="packageSelect" name="packageSelect" required><option value="">Select a package</option></select><small class="error" id="packageSelectError"></small></div>
+          <div class="form-field"><label for="contactNumber">Contact Number <span>*</span></label><input id="contactNumber" name="contactNumber" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX" required><small class="error" id="contactNumberError"></small></div>
+          <div class="form-field"><label for="preferredDate">Preferred Date <span>*</span></label><input id="preferredDate" name="preferredDate" type="date" required><small class="error" id="preferredDateError"></small></div>
+          <div class="form-field"><label for="siteAddress">Site Address <span>*</span></label><input id="siteAddress" name="siteAddress" type="text" autocomplete="street-address" placeholder="Enter project/site address" required><small class="error" id="siteAddressError"></small></div>
+          <div class="form-field"><label for="siteArea">Site Area (sq. meters) <span>*</span></label><input id="siteArea" name="siteArea" type="number" min="1" step="0.1" placeholder="e.g. 100" required><small class="error" id="siteAreaError"></small></div>
+        </div>
+        <div class="form-footer"><p>Fields marked * are required.</p><button class="button button-primary submit-button" type="submit">➤ &nbsp;Submit Request</button></div>
+        <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+
+    <section class="confirmation-section section" id="confirmation" hidden>
+      <div class="receipt" id="receiptBox"><div class="receipt-title"><span class="success-icon">✓</span><h2>Confirmation Summary</h2></div><div id="receiptDetails"></div><div class="receipt-total"><span>Total Cost</span><strong id="receiptTotal"></strong></div><div class="receipt-actions"><button type="button" class="button button-primary" id="printReceipt">Print Receipt</button><button type="button" class="button button-outline" id="newRequest">New Request</button></div></div>
+    </section>
+
+
+    <section class="records-section section" id="records">
+      <div class="records-intro"><span class="records-icon">▤</span><h2>Records Management</h2><p>View, search, and manage your transactions.</p><div class="records-count"><strong id="recordCount">0</strong><span>saved records</span></div></div>
+      <div class="records-panel">
+        <div class="records-toolbar"><label class="search-box"><span>⌕</span><input id="recordSearch" type="search" placeholder="Search by client name or reference ID..." aria-label="Search records"></label><label class="status-filter">Filter by Status <select id="statusFilter"><option value="all">All Statuses</option><option value="Pending">Pending</option><option value="Confirmed">Confirmed</option><option value="Completed">Completed</option><option value="Cancelled">Cancelled</option></select></label></div>
+        <div class="table-wrap"><table><thead><tr><th>#</th><th>Reference ID</th><th>Client Name</th><th>Package</th><th>Date</th><th>Status</th><th>Total</th><th>Actions</th></tr></thead><tbody id="recordsTableBody"></tbody></table><div class="empty-state" id="emptyState">No records found yet. Submit a request to get started.</div></div>
+      </div>
+    </section>
+
+
+    <section class="about-section section" id="about">
+      <div class="about-heading"><span class="success-icon">i</span><div><h2>About / Help</h2><p>Learn how our consultation and ordering process works.</p></div></div>
+      <div class="steps"><article><span class="step-number">1</span><span class="step-icon">❧</span><h3>Choose a Package</h3><p>Select a consultation or plant package from the catalog.</p></article><span class="step-arrow">→</span><article><span class="step-number">2</span><span class="step-icon">▦</span><h3>Fill Out the Form</h3><p>Enter your details, site area, and preferred date.</p></article><span class="step-arrow">→</span><article><span class="step-number">3</span><span class="step-icon">✓</span><h3>Confirm Your Request</h3><p>Submit and review your generated receipt.</p></article></div>
+      <aside class="help-card"><h3>Need Help?</h3><p>Questions about packages or the process?</p><p>✉ support@greenscape.example</p><p>☎ 09XX XXX XXXX</p></aside>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">❧</span><span><strong>GreenScape</strong><small>Design · Plant · Thrive</small></span></a><p>Greener Spaces. Better Living.</p><nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#catalog">Services</a><a href="#records">Records</a><a href="#about">About</a></nav><small>Front-end demonstration project · No real payments are processed.</small></footer>
+</body>
+</html>
